@@ -1,14 +1,13 @@
 language: cpp
 compiler: gcc
 before_script:
-  - sudo apt-get install libboost-test-dev doxygen -y
+  - sudo apt-get install libboost-test-dev -y
   - echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" | sudo tee -a /etc/apt/sources.list
   - sudo apt-get update -qq
 script:
   - cmake .
   - cmake --build . 
   - cmake --build . --target package
-  - doxygen
 before_install:
   # C++14
   - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test

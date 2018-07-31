@@ -12,7 +12,7 @@ set_target_properties(matrix PROPERTIES
 	COMPILE_OPTION -Wpedantic -Wall -Wextra
 )
 
-install(TARGETS helloworld_cli RUNTIME DESTINATION bin)
+install(TARGETS matrix RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
 
